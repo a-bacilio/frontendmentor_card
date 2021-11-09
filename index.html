@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: absolute;
+      bottom: 20px;
+      margin: 0 auto;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      position: relative;
+      width: 98vw;
+      height: 98vh;
+      background-color: #1ea7b1;
+      display: flex;
+      flex-direction: center;
+      justify-content: center;
+      align-items: center;
+      margin: auto auto;
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wrapper .background{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: center;
+      transform: rotate(45deg);
+      
+    }
+
+    .background .sideA {
+      content: "";
+      position: relative;
+      top: 0;
+      
+      width: 50%;
+      height: 200vh;
+      background-image: url("images/bg-pattern-bottom.svg");
+      background-repeat: space;
+      background-position: left center;
+      background-size: cover;
+      transform:  rotateY(180deg) translateX(150px);
+
+      overflow: hidden;
+    }
+
+    .background .sideB {
+      content: "";
+      position: relative;
+      top: 0;
+      width: 50%;
+      height: 200vh;
+      background-image: url("images/bg-pattern-bottom.svg");
+      background-repeat: space;
+      background-position: left center;
+      background-size: cover;
+      transform:  translateX(150px);
+ 
+      overflow: hidden;
+    }
+
+    .card{
+      width: 20%;
+      height: 50%;
+      background-color: white;
+      border-radius: 5%;
+      z-index: 99;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .top{
+      background-image: url("images/bg-pattern-card.svg");
+      width: 100%;
+      height: 40%;
+    }
+
+    .middle{
+      background-color: white;
+      width: 100%;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .bottom{
+      background-color: white;
+      width: 100%;
+      height: 20%;
+    }
+
+    .textzone{
+      font-family: Arial, Helvetica, sans-serif;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: rgb(184, 184, 184) 2px solid;
+    }
+
+    .textzone h1{
+      font-size: 2rem;
+      margin: auto auto;
+    }
+
+    h1>span{
+      font-size: 1.5rem;
+      color: grey;
+      margin: auto auto;
+    }
+
+    .textzone h2{
+      font-size: 1.5rem;
+      color: grey;
+      margin: auto auto;
+    }
+
+    .bottom{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .statszone{
+      width: 90%;
+      height: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .zone h1{
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 10% auto;
+    }
+
+    .zone p{
+      font-size: 1rem;
+      margin: 10% auto;
+    }
+
+    .imgwrapper{
+      position: absolute;
+      margin: auto auto;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    img{
+      height: 150%;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      border: 5px solid white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="background">
+      <div class="sideA">
+
+      </div>
+      <div class="sideB">
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top">
+
+      </div>
+      <div class="middle">
+        <div class="imagewrapper">
+          <img src="images/image-victor.jpg" />
+        </div>
+        <div class="textzone">
+          <h1> Victor Crest
+            <span>26</span>
+          </h1>
+          <h2>London</h2>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="statszone">
+          <div class="zone left">
+            <h1>80K</h1>
+          <p>Followers</p>
+          </div>
+          <div class="zone">
+            <h1>803K</h1>
+            <p>Likes</p>
+          </div>
+          <div class="zone right">
+            <h1>1.4K</h1>
+            <p>Photos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
